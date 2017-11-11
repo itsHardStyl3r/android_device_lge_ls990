@@ -17,8 +17,8 @@
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/g3-common/configs/audio/audio_platform_info_bcm.xml:system/etc/audio_platform_info.xml \
-    device/lge/g3-common/configs/audio/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
+    device/lge/g3-common/configs/audio/audio_platform_info_bcm.xml:system/vendor/etc/audio_platform_info.xml \
+    device/lge/g3-common/configs/audio/mixer_paths_bcm.xml:system/vendor/etc/mixer_paths.xml
 
 # GPS
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
