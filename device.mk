@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,38 +15,34 @@
 # limitations under the License.
 #
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/ls990/ls990-vendor.mk)
-
 # Audio
 PRODUCT_COPY_FILES += \
     device/lge/g3-common/configs/audio/audio_platform_info_bcm.xml:system/etc/audio_platform_info.xml \
     device/lge/g3-common/configs/audio/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
 
 # GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# Radio
-PRODUCT_PACKAGES += \
-    librmnetctl
-
-# Wifi
-PRODUCT_PACKAGES += \
-    libnetcmdiface
-
-# NFC packages
+# NFC
 PRODUCT_PACKAGES += \
     nfc.msm8974 \
     libnfc \
     libnfc_jni \
     Nfc
 
-# Get BCMDHD configs
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Radio
+PRODUCT_PACKAGES += librmnetctl
+
+# Wifi
+PRODUCT_PACKAGES += libnetcmdiface
+
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
-# common g3
+# Inherit from lge g3-common
 $(call inherit-product, device/lge/g3-common/g3.mk)
+
+# Inherit from vendor blobs
+$(call inherit-product-if-exists, vendor/lge/ls990/ls990-vendor.mk)
