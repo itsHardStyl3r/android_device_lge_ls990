@@ -21,14 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ls990 device
 $(call inherit-product, device/lge/ls990/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common POSP stuff.
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := ls990
-PRODUCT_NAME := lineage_ls990
+PRODUCT_NAME := potato_ls990
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-ls990
 PRODUCT_MANUFACTURER := LGE
+
+# Maintainer Prop
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="HardStyl3r"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g3" \
