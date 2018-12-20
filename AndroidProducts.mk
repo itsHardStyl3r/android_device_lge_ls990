@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ls990.mk
+    $(LOCAL_DIR)/aosp_ls990.mk
