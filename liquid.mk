@@ -20,11 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ls990 device
 $(call inherit-product, device/lge/ls990/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common LiquidRemix stuff.
+$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.liquid.maintainer=hardStyl3r
 
 PRODUCT_DEVICE := ls990
-PRODUCT_NAME := lineage_ls990
+PRODUCT_NAME := liquid_ls990
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-ls990
 PRODUCT_MANUFACTURER := LGE
