@@ -20,11 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ls990 device
 $(call inherit-product, device/lge/ls990/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Bootleggers stuff.
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+
+TARGET_PICK_BOOTANIMATION := 9
 
 PRODUCT_DEVICE := ls990
-PRODUCT_NAME := lineage_ls990
+PRODUCT_NAME := bootleg_ls990
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-ls990
 PRODUCT_MANUFACTURER := LGE
