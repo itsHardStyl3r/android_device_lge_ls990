@@ -23,7 +23,7 @@ $(call inherit-product, device/lge/ls990/device.mk)
 # Inherit some common Bootleggers stuff.
 $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
-TARGET_PICK_BOOTANIMATION := 9
+TARGET_PICK_BOOTANIMATION := 4
 
 PRODUCT_DEVICE := ls990
 PRODUCT_NAME := bootleg_ls990
