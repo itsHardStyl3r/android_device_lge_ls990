@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_ls990.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_ls990-userdebug \
+    aosp_ls990-eng \
+    aosp_ls990-user
